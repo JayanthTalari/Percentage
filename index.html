@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Percentage Converter</title>
+        <div id = "first">
+           <h1>CGPA To Percentage Converter</h1>
+        </div>
+        <link rel = "stylesheet" href = "main.css">
+    </head>
+        <body>
+       
+            <div class = "sec">
+                <form onsubmit="event.preventDefault(); calculator();">
+                    <label for="number"><br>CGPA : <br></label>
+                    
+                    <input type="number" step='0.01' placeholder="Enter CGPA" name="cgpa" id = "number" required>
+                    <br>
+                    <br>
+                    <button id="ans" type="submit"> Click Me </button>
+                    <br>
+                    <label for="result"> <br>Percentage:<br></label>
+                    <p id ="result"></p>
+      
+                </form>
+
+            </div>
+            <script>
+                function calculator(){
+                    let num1 = parseFloat(document.getElementById("number").value);
+
+                    let result = num1 * 9.5;
+
+                    document.getElementById("result").innerHTML = result;
+
+                }
+            </script>
+            
+        
+        </body>
+    
+    
+</html>
